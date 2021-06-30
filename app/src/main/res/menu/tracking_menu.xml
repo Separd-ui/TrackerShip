@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Finish run"
+        android:id="@+id/finish_run"
+        android:icon="@drawable/ic_cancel"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+</menu>

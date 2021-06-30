@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TrackerShip" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange_alpha</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="toolbarStyle">@style/CustomToolbar</item>
+        <item name="textInputStyle">@style/CustomInputStyle</item>
+        <item name="floatingActionButtonStyle">@style/CustomFB</item>
+        <item name="alertDialogStyle">@style/MaterialDialog</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/orange_alpha</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="background">@color/orange_alpha</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+    <style name="CustomFB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="rippleColor">@color/orange_alpha</item>
+    </style>
+    <style name="CustomInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="startIconTint">@color/color_search_selector</item>
+        <item name="endIconTint">@color/color_search_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="boxStrokeColor">@color/orange</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="boxBackgroundColor">@color/orange_alpha_l</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="strokeColor">@color/orange</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusTopStart">0dp</item>
+    </style>
+
+    <style name="MaterialDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/orange_alpha</item>
+        <item name="colorSecondary">@color/orange_alpha</item>
+        <item name="colorSurface">@color/orange</item>
+        <item name="alertDialogStyle">@style/DialogShape</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveBStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeBStyle</item>
+    </style>
+
+
+    <style name="DialogShape" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/CustomShape</item>
+    </style>
+    <style name="CustomShape" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+    <style name="PositiveBStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="NegativeBStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

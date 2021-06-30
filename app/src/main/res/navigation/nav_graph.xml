@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupFragment">
+
+    <action android:id="@+id/action_global_ToTrackingFragment"
+        app:destination="@id/trackingFragment"
+        app:launchSingleTop="true"/>
+
+    <fragment
+        android:id="@+id/runFragment"
+        android:name="com.example.trackership.fragments.RunFragment"
+        android:label="fragment_run"
+        tools:layout="@layout/fragment_run" >
+        <action
+            android:id="@+id/action_runFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment"
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off"/>
+    </fragment>
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.example.trackership.fragments.SetupFragment"
+        android:label="fragment_setup"
+        tools:layout="@layout/fragment_setup" >
+        <action
+            android:id="@+id/action_setupFragment_to_runFragment"
+            app:destination="@id/runFragment"
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.trackership.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.trackership.fragments.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" />
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.example.trackership.fragments.TrackingFragment"
+        android:label="fragment_tracking"
+        tools:layout="@layout/fragment_tracking" >
+        <action
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off"
+            android:id="@+id/action_trackingFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
+</navigation>
